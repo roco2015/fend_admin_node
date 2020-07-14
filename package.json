@@ -13,7 +13,6 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "koa2-request": "^1.0.4",
     "koatty": "^2.x.x",
     "think_static": "^2.x.x"
   },
