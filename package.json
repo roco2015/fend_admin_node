@@ -13,6 +13,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "axios": "^0.19.2",
     "koatty": "^2.x.x",
     "think_static": "^2.x.x"
   },

@@ -6,13 +6,13 @@
  */
 import { Controller, BaseController, PostMapping, Body, Autowired } from 'koatty';
 import { App } from '../../App';
-import { HttpService } from '@/service/HttpService';
+import { WeChatService } from '../../service/monitor/WeChatService';
 
-@Controller('/monitor')
-export class MonitorControllerController extends BaseController {
+@Controller('/wechat')
+export class WeChatController extends BaseController {
 
     @Autowired()
-    private httpService: HttpService;
+    private weChatService: WeChatService;
 
     app: App;
 
@@ -24,10 +24,10 @@ export class MonitorControllerController extends BaseController {
         //...
     }
 
-    @PostMapping('/error')
-    error(@Body() body: any) {
+    @PostMapping('/send')
+    send(@Body() body: any) {
         console.log(body.post);
-        this.httpService.post(null, body.post);
-        return this.ok('receive the report, thanks', {}, 0);
+        this.weChatService.sendMessage(body.post);
+        return this.ok('received, thanks', {}, 0);
     }
 }

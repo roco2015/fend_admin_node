@@ -3,7 +3,7 @@
 {
     "apps": [
         {
-            "name": "feng_admin_node",
+            "name": "roco_node",
             "script": "./dist/App.js",
             "max_memory_restart": "300M",
             "instances": 2,
